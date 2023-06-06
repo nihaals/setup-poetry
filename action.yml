@@ -1,0 +1,13 @@
+name: "setup-poetry"
+author: "Nihaal Sangha"
+description: "Installs Poetry"
+inputs:
+  poetry-version:
+    description: Poetry version to use, if version is not provided then latest stable version will be used
+    required: false
+runs:
+  using: composite
+  steps:
+    - uses: Gr1N/setup-poetry@v8
+      with:
+        poetry-version: ${{ inputs.poetry-version }}
